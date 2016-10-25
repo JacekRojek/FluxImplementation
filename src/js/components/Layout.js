@@ -21,7 +21,11 @@ export default class Layout extends React.Component {
   render() {
     return (
       <div>
+
+        <Header title="GameDevEmpire - developed by IndieDevArt"/>
+
         <Profile name={this.state.name}/>
+
         <Actions />
 
 
