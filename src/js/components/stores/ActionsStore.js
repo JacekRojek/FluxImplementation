@@ -4,30 +4,101 @@ import * as ProfileActions from "../FluxActions/UpdateProfile";
 
 class ActionsStore extends EventEmitter{
   constructor(){
-    super();
+
+        super();
+
+
+
     this.actions=[
       {
         id:1,
         name:"Work",
-        function: function addExperience(){
-          ProfileActions.addReward(20);
-        }
+        function: function slide(){
+          $("#div1").slideToggle();
+        },
+        innerButtons:[
+            {
+              id:11,
+              name:"Warehouse",
+              function: function addExperience(){
+                ProfileActions.addReward(20);
+              }
+            },
+            {
+              id:12,
+              name:"Freelancer",
+              function: function addExperience(){
+                ProfileActions.addReward(20);
+              }
+          },
+          {
+            id:13,
+            name:"Developer",
+            function: function addExperience(){
+              ProfileActions.addReward(20);
+            }
+        }]
       },
       {
         id:2,
         name:"Read",
-        function: function addExperience(){
-          ProfileActions.addReward(20);
-        }
-    },
+        function: function slide(){
+          $("#div2").slideToggle();
+        },
+        innerButtons:[
+            {
+              id:21,
+              name:"Warehouse",
+              function: function addExperience(){
+                ProfileActions.addReward(20);
+              }
+            },
+            {
+              id:22,
+              name:"Freelancer",
+              function: function addExperience(){
+                ProfileActions.addReward(20);
+              }
+          },
+          {
+            id:23,
+            name:"Developer",
+            function: function addExperience(){
+              ProfileActions.addReward(20);
+            }
+        }]
+      },
+
     {
       id:3,
       name:"Practice tasks",
-      function: function addExperience(){
-        ProfileActions.addReward(20);
+      function: function slide(){
+        $("#div3").slideToggle();
+      },
+      innerButtons:[
+          {
+            id:31,
+            name:"Warehouse",
+            function: function addExperience(){
+              ProfileActions.addReward(20);
+            }
+          },
+          {
+            id:32,
+            name:"Freelancer",
+            function: function addExperience(){
+              ProfileActions.addReward(20);
+            }
+          },
+          {
+            id:33,
+            name:"Developer",
+            function: function addExperience(){
+              ProfileActions.addReward(20);
+            }
+        }]
       }
-  }
-];
+    ];
   }
   createButton(name){
     const id = Date.now();

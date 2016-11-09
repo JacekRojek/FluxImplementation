@@ -28,13 +28,14 @@ createButton(){
   render() {
     const { buttons } =this.state;
     const ButtonComponents = buttons.map((button) => {
-      return <Buttons key={button.id} name={button.name} function={button.function}/>
+
+      return <Buttons id={button.id} key={button.id+"123"} name={button.name} function={button.function}/>
     })
     return (
       <div style={divStyle}>
         <h2>Actions</h2>
         <ul>{ButtonComponents}</ul>
-        <button onClick={this.createButton.bind(this)}>Create!</button>
+
       </div>
     );
   }

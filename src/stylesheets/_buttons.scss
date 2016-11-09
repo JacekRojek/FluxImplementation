@@ -15,7 +15,8 @@ span.tooltiptext{
 
 }
 
-button.btn-outline-info{
+button{
+  color: $font-colour;
   box-shadow: 0 3px 0 0 $shadow;
   background-color:$primary;
   width: 260px;
