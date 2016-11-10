@@ -21,7 +21,9 @@ class ActionsStore extends EventEmitter{
               id:11,
               name:"Warehouse",
               function: function addExperience(){
-                ProfileActions.addReward(20);
+                ProfileActions.addReward(20, "REP");
+                ProfileActions.addReward(20, "MONEY");
+                ProfileActions.addReward(20, "EXP");
               }
             },
             {
@@ -118,7 +120,7 @@ class ActionsStore extends EventEmitter{
       this.createButton(action.name)
         break;
       default:
-          console.log("other action");
+        
     }
   }
 }

@@ -36,8 +36,14 @@ button{
   &:active {
     background: darken($primary-complementary, 10%);
     box-shadow: none;
+    color: darken($font-colour,20%);
     margin-bottom: -3px;
     margin-top: $margin-button + 3px;
+  }
+  &:focus{
+      color: $font-colour !important;
+      box-shadow: 0 3px 0 0 $shadow;
+      outline: 0px !important;
   }
   @media screen and (max-width: $break-small) {
   font-size: 1em;

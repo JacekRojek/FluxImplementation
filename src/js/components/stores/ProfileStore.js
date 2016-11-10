@@ -10,8 +10,15 @@ class ProfileStore extends EventEmitter{
 
   }
   addExperience(amount){
-    this.experience += 100;
-    console.log(this.experience);
+    this.experience += amount;
+    this.emit("change");
+  }
+  addMoney(amount){
+    this.money += amount;
+    this.emit("change");
+  }
+  addReputation(amount){
+    this.reputation += amount;
     this.emit("change");
   }
 
@@ -19,7 +26,13 @@ class ProfileStore extends EventEmitter{
   handleActions(action){
     switch (action.type) {
       case "EXP":
-      this.addExperience(action.amount)
+        this.addExperience(action.amount)
+        break;
+      case "REP":
+        this.addReputation(action.amount)
+        break;
+      case "MONEY":
+        this.addMoney(action.amount)
         break;
       default:
 

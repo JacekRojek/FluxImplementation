@@ -38,7 +38,7 @@ render() {
     <div style={divStyle}>
     <button key={this.props.id+"124"} style={divStyle} className="btn" onClick={this.props.function}>
       {this.props.name}</button>
-      <div id={"div"+ this.props.id}>{InnerButtonsMap}</div>
+      <div class="buttons-wrap" id={"div"+ this.props.id}>{InnerButtonsMap}</div>
     </div>
   );
 

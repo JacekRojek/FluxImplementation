@@ -8,6 +8,30 @@
 
 // Styles
 body {
+  .buttons-wrap{
+    display:none;
+  }
+  .info-top h4{
+    color: $background;
+  }
+  h4{
+    margin-top: 8px;
+    margin-bottom:0px;
+    color: $font-colour;
+  }
+  .progress-bar{
+    display: inline-block;
+    height:3px;
+    width:100%;
+    color:darken($primary, 10%);
+    display: none;
+  }
+  .buttons-wrap{
+    button{
+      padding-top: 3px;
+    }
+  }
+
   #achievements-popUp{
     display: none;
     i{

@@ -5,6 +5,7 @@ import Level from "./Profile/Level";
 import Money from "./Profile/Money";
 import Reputation from "./Profile/Reputation";
 import ProfileStore from "./Stores/ProfileStore";
+import Skills from "./Profile/PlayerSkills";
 const divStyle = {
 
 };
@@ -38,6 +39,7 @@ export default class Profile extends React.Component {
         <Level value={this.state.experience}/>
         <Money value={this.state.money}/>
         <Reputation value={this.state.reputation}/>
+        <Skills value={this.state.reputation} />
       </div>
     );
   }
